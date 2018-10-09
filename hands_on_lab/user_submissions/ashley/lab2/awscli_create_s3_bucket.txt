@@ -1,0 +1,21 @@
+(python3) OrgAdmin:~/environment/ashleygould/start-here/hands_on_lab/user_submissions/ashley/lab1 (ashley_lab_solutions) $ aws s3api create-bucket --bucket bleebucketblee --create-bucket-configuration LocationConstraint=us-west-2                                                                   
+{
+    "Location": "http://bleebucketblee.s3.amazonaws.com/"
+}
+
+(python3) OrgAdmin:~/environment/ashleygould/start-here/hands_on_lab/user_submissions/ashley/lab1 (ashley_lab_solutions) $ aws s3api list-buckets --query "Buckets[].Name"
+[
+    "bleebucketblee",
+    "davidrivera-target",
+    "drivera-test-bucket",
+    "elblogs-071826132890-ecsrefarch-dev",
+    "public.bucket.ucop.test",
+    "sceptre-ecsrefarch-dev-pi-pipelineartifactsbucket-j0fac7u3nw2h",
+    "stacker-jhsu-logging",
+    "stacker-testvpc",
+    "stacker-versiontags",
+    "stackset-85a3a7aa-feb4-4d94-91f0-431-configbucket-6vxjuij1916g",
+    "testing-configured-bucket"
+]
+
+(python3) OrgAdmin:~/environment/ashleygould/start-here/hands_on_lab/user_submissions/ashley/lab1 (ashley_lab_solutions) $ aws s3api delete-bucket --bucket bleebucketblee --region us-west-2
